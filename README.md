@@ -15,7 +15,7 @@ This is what the app is doing exactly:
 - this broadcast receiver is idle until the event of a newly received location, it then stores the location in the shared preferences file
   of the application so it remains persistent
 - after the storing of the location the receiver intent goes idle again
-- if the amount of stored locations is 6, the locations are to be uploaded to a server known by the app and the locations are removed from
+- if the amount of stored locations is 6 (adjustable via constant), the locations are to be uploaded to a server known by the app and the locations are removed from
   the shared preferences file; this is done to limit the amount of stored data and to limit the amount of times data is send
 - the intent stays available and working as described even while the app is in background, terminated or the device is in stand by
 
