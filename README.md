@@ -25,3 +25,8 @@ At the start of the app the map will further focus on either the last registered
 
 
 The app is working with Android API 21 upwards and compiled against API 23. It was tested on an emulated Nexus 5X running an x86 Android 5.0 (API 23).
+
+Outlook:
+The app could be extended by the implementation of further functionality harvesting additional data cloaked behind diverse features of greatness and fun which might lure users into the trap of downloading the app and spreading their very privacy. 
+
+Fun and giggles for the evil creators of apps driven by intentions of dark and devilish origin. Do. Not. Easily. Trust.
