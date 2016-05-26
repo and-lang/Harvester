@@ -4,7 +4,7 @@ This app is an example meant to show how android apps could gather usage data in
 
 The locations are passively harvested even when the app is in background, terminated or the device is in standby mode. 
 
-The app itself is showing a google api map which sets markers for stored and newly registered locations. It is mainly intended for visualizing the locations which could also be received passively while the app was not even running. In a real world app this could be built out into a app providing functionality regarding maps and location, a user could wish for and want. The data would then still be gathered as is and send to some server for use in a way that should be prohibited. 
+The app itself is showing a google api map which sets markers for stored and newly registered locations. It is mainly intended for visualizing the locations which could also be received passively while the app was not even running. In a real world app this could be built out into an app providing functionality regarding maps and location a user could wish for and want - and thus hiding the real intention of collecting data from the device. The data would then still be gathered as is and send to some server for use in a way that should be prohibited. 
 
 The necessary permission for accessing location data is added to the manifest file of the app without directly being presented to the user. The user would only notice
 the permissions of the app by looking at the app info page or in case the app would be available via google play store by having a look at the corresponding page there. 
