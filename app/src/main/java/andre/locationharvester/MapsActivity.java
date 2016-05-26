@@ -126,6 +126,8 @@ public class MapsActivity extends FragmentActivity implements
         }
         Location lastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
 
+        mMap.clear();
+
         /*
         load locations stored in shared preferences, place markers, move map and zoom in;
          */
