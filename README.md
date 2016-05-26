@@ -1,6 +1,6 @@
 # Harvester
 
-This app is an example meant to show how android apps could gather usage data in a way users would likely not be fond of. It shows a way to harvest user data from an android device. The harvested location data is stored and meant (not working atm) to be send to a server.
+This app is an example meant to show how android apps could gather usage data in a way users would likely not be fond of. It shows one possible way to harvest user data from an android device. The harvested location data is stored and meant (not working atm) to be send to a server.
 
 The locations are passively harvested even when the app is in background, terminated or the device is in standby mode. 
 
