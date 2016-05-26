@@ -32,11 +32,12 @@ public final class Constants {
      */
     public static final int UPDATE_FASTEST_INTERVAL_MS = 1000;
 
+    /*
+    port used for sending harveseted data
+     */
+    public static final int PORT_SEND_HARVEST = 4242;
+
     private Constants() {
         throw new AssertionError();
-    }
-
-    public void test(String foo) {
-
     }
 }

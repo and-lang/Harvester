@@ -16,6 +16,7 @@ import java.util.Set;
 
 import static andre.locationharvester.Constants.LOCATION_SET_KEY;
 import static andre.locationharvester.Constants.MAX_SET_SIZE;
+import static andre.locationharvester.Constants.PORT_SEND_HARVEST;
 import static andre.locationharvester.Constants.SHARED_PREF_FILENAME;
 
 /**
@@ -31,12 +32,15 @@ public class LocationReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
 
         if (LocationResult.hasResult(intent)) {
+            // get the new location
             this.locationResult = LocationResult.extractResult(intent);
             Log.i(TAG, "Location Received: " + this.locationResult.toString());
 
+            // create shared preferences and it's editor to store the new location
             SharedPreferences prefs = context.getSharedPreferences(SHARED_PREF_FILENAME, Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();
 
+            // store the new location
             storeLocation(locationResult, prefs, editor);
         }
     }
@@ -63,10 +67,13 @@ public class LocationReceiver extends BroadcastReceiver {
         */
         if (set.size() == MAX_SET_SIZE) {
             // TODO send data to server
+            // tcpConnection.sendString(set.toString(), PORT_SEND_HARVEST);
+
+            // remove set from shared prefs
             editor.remove(LOCATION_SET_KEY);
             editor.apply();
         } else {
-            // if set is below maximum desired size, store it in shared prefs
+            // if set is below maximum desired size, store it in shared prefs without sending it yet
             editor.putStringSet(LOCATION_SET_KEY, set);
             editor.apply();
         }
